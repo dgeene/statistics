@@ -22,5 +22,7 @@ fn main() {
 }
 
 fn sort(unsorted: &[i32]) {
-    println!("first elem: {}", unsorted[0]);
+    for (i, elem) in unsorted.iter().enumerate() {
+        println!("elem: {}", elem);
+    }
 }
