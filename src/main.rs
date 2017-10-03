@@ -18,11 +18,17 @@ fn main() {
 
     //let sorted = sort();
     sort(&input);
-    println!("Hello, world!");
 }
 
 fn sort(unsorted: &[i32]) {
+    let mut sorted: Vec<i32> = Vec::new();
+    let mut val = unsorted[0];
+    // find the smallest value
     for (i, elem) in unsorted.iter().enumerate() {
-        println!("elem: {}", elem);
+        //println!("elem: {}", elem);
+        if val < elem {
+            val = elem;
+        }
     }
+    println!("smallest elem: {}", val)
 }
